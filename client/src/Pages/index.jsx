@@ -11,7 +11,7 @@ const MainPage = () => {
     const { id } = useParams();
     
     useEffect(() => {
-        axios.get("/api/getmed/" + id, {headers:{"Content-Type":"application/json"}})
+        axios.get("/api/getmed/" + id)
             .then((res) => {
                 setMedData(res)
                 console.log(res)
