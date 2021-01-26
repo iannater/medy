@@ -25,6 +25,7 @@ module.exports = function (app) {
  
   app.post("/api/login", passport.authenticate("local"), (req, res) => {
     // Sending back a password, even a hashed password, isn't a good idea
+    console.log("Userssss",req.user)
     res.json(
       req.user
     );
@@ -72,11 +73,15 @@ module.exports = function (app) {
       });
   });
 
-  app.get("/api/getmed/:id", isAuthenticated, (req, res) => {
+  app.get("/api/getMed", isAuthenticated, (req, res) => {
+    console.log("req.user", req.user)
    
-    db.Medicine.findAll({ where: { id: req.params.id }
+    db.User.findOne({ where: { id: req.user.id, include: [{all: true, nested: true}]}
+      
       
     }).then(result =>  {
+      console.log("ress", res)
+      
         // res.redirect(307, "/api/login");
         res.json({result})
       })

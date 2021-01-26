@@ -27,8 +27,9 @@ passport.use(new LocalStrategy({
             message: "Incorrect password."
           });
         }
-        // If none of the above, return the user
-        return done(null, userInfo);
+        else{
+          return done(null, userInfo);
+      } 
       }).catch(err => {
         console.log(err);
       });

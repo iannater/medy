@@ -8,10 +8,10 @@ import {useParams} from 'react-router';
 
 const MainPage = () => {
     const [medData, setMedData] = useState({})
-    const { id } = useParams();
+    
     
     useEffect(() => {
-        axios.get("/api/getmed/" + id)
+        axios.get("/api/getMed")
             .then((res) => {
                 setMedData(res)
                 console.log(res)

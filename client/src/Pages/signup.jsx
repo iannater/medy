@@ -38,7 +38,7 @@ const SignUp = () => {
 
                             <p>
 
-                                <div class="buttoncss">
+                                <div className="buttoncss">
                                     <Button onClick={createLogin} href="/main" type="submit">Submit</Button>
                                 </div>
                             </p>

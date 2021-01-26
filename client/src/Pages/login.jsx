@@ -7,6 +7,7 @@ import "./signup.css";
 const UserLogin = () => {
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
+  const [createMedURL, setMainURL]= useState("")
 
   const submitUser = () => {
     axios.post("/api/login", {
@@ -14,6 +15,8 @@ const UserLogin = () => {
       password
     }).then((res) => {
       console.log("login Response", res)
+      setMainURL(res.dataValues.id)
+      console.log("URL ID", res.User.dataValues.id)
     })
   }
   // Map over this.state.projects and render a project component for each one

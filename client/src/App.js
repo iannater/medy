@@ -6,7 +6,8 @@ import './App.css';
 //Pages
 import signup from "./Pages/signup";
 import login from "./Pages/login";
-import main from "./Pages/index"
+import main from "./Pages/index";
+import createMed from "./Pages/addMed";
 
 
 function App() {
@@ -16,8 +17,9 @@ function App() {
         <div className="blah">
       <Switch>
         <Route exact path="/" component={signup}/>
-        <Route exact path="/main/:id" component={main}/>
+        <Route exact path="/main" component={main}/>
         <Route exact path="/login" component={login}/>
+        <Route exact patch="/createMed" component={createMed}/>
 
       </Switch>
       </div>

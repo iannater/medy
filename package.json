@@ -6,6 +6,7 @@
   "dependencies": {
     "axios": "^0.21.1",
     "bcrypt": "^5.0.0",
+    "compression": "^1.7.4",
     "concurrently": "^5.3.0",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
@@ -27,7 +28,6 @@
     "build": "cd client && npm run build",
     "heroku-postbuild": "npm run build"
   },
-
   "browserslist": {
     "production": [
       ">0.2%",
