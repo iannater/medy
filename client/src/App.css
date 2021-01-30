@@ -1,74 +1,37 @@
 .App {
   text-align: center;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to right, rgb(185, 90, 2) , rgba(177, 113, 53, 0.61));
+  
+}
+
+.medBtn{
+  margin: 5px;
+  background-color: white !important;
+  color: black;
+  width: 50%;
+}
+
+#userName{
+  font-size: 30px;
+  text-decoration: underline;
 }
 
 .addView {
   width: 100%;
 }
 
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.btnRow{
+  margin-bottom: 20px;
 }
 
 .indexContainer {
   width: 100%;
 }
 
-
 h3 {
   width: max-content;
-}
-
-.homeownermain {
-  width: max-content;
-  margin-left: auto;
-  margin-right: auto;
-  font-size: 20px;
-}
-
-.singleWrap {
-display: flex;
-flex-wrap: wrap;
-}
-
-.singleParentWrap{
-align-items: center;
-flex-grow: 0;
-flex-shrink: 0;
-flex-basis: 33%;
-margin-bottom: .5%;
-margin-right: auto;
-margin-left: .5%;
-}
-
-#wrapperId {
-  text-align: center;
-}
-
-.agentName {
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .btn {
@@ -77,127 +40,6 @@ margin-left: .5%;
   border: none;
 }
 
-.genPart {
-  background: none;
-  color:rgb(19, 18, 18);
-  display: flexbox;
-  align-items:center;
-  justify-content:center;
-  font-size: x-large;
-  line-height: normal;
-  padding: 5px; 
-  text-align: center;
-  width: 100%;
-  padding: -5px;
-}
-
-.genPartb {
-  background: none;
-  color:rgb(19, 18, 18);
-  display: flexbox;
-  align-items:center;
-  justify-content:center;
-  font-size: x-large;
-  line-height: 80%;
-  padding: 5px; 
-  padding-bottom: -20%;
-  margin-bottom: -4%;
-  text-align: center;
-  width: 100%;
-  height: -50%;
-}
-
-.genWrap {
-  margin: auto;
-  width:100%;
-  height:5%;
-background: none;
-  display:grid;
-  grid-template-columns: 50% 50%;
-  grid-row: auto auto;
-  margin-left: auto;
-  margin-right: auto;
-  background-color: rgb(253, 253, 253);
-  border-top: 1px solid rgb(29, 48, 88);
-}
-
-.genWrapb {
-  width:100%;
-  height:100%;
-background: none;
-  display:grid;
-  grid-template-columns: 40% 40%;
-  grid-row: auto auto;
-  margin-left: 10%;
-  margin-right: -10%;
-  align-self: center;
-  align-items: center;
-}
-
-.cardWrap {
-  background: none;
-  margin-bottom: 5px;
-}
-
-.innerPart {
-  font-weight: 500;
-  width: 100%;
-  font-size: 20px;
-  text-decoration: underline;
-}
-
-
-.innerGenPart {
-  line-height: 100%;
-  width: 100%;
-  font-size: x-large;
-  font-weight: 400;
-}
-
-innerAddViewa {
-  background: none;
-  color:rgb(19, 18, 18);
-  display: flexbox;
-  align-items:center;
-  justify-content:center;
-  font-size: x-large;
-  line-height: 80%;
-  padding: 5px; 
-  text-align: center;
-  width: 100%;
-  padding: -5px;
-}
-
-
-.addHome {
-width: 70%;
-font-weight: 500;
-margin-right: 2%;
-}
-
-.searchBar {
-width: 90%;
-height: 48px;
-}
-
-.rounded {
-  font-size: x-large;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.searchAdd {
-  margin-left: auto;
-  margin-right: auto;
-  display: flex;
-  align-items: flex-end;
-}
-
-.card {
-  background-color:rgb(243, 242, 241);
-  border: solid .5px rgb(29, 48, 88);
-  margin: 5px;
-}
 
 .signupWrap {
   margin-left: auto;

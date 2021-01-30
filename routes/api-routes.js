@@ -56,7 +56,7 @@ module.exports = function (app) {
       res.redirect("/");
   });
 
-  app.post("/api/createmed/:id", isAuthenticated, function (req, res) {
+  app.post("/api/createmed/:id",  function (req, res) {
     db.Medicine.create({
       medicineName: req.body.medicineName,
       timeTaken: req.body.timeTaken,
@@ -73,14 +73,16 @@ module.exports = function (app) {
       });
   });
 
-  app.get("/api/getMed", isAuthenticated, (req, res) => {
+  app.get("/api/getMed",  (req, res) => {
     console.log("req.user", req.user)
+    console.log("User ID", req.user.id)
+
+    //, include: [{model: db.Medicine}]
    
-    db.User.findOne({ where: { id: req.user.id, include: [{all: true, nested: true}]}
-      
+    db.User.findOne({ where: { id: req.user.id}, include: [{model: db.Medicine}]
       
     }).then(result =>  {
-      console.log("ress", res)
+      console.log("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%", result)
       
         // res.redirect(307, "/api/login");
         res.json({result})
@@ -89,6 +91,8 @@ module.exports = function (app) {
         res.status(401).json(err);
       });
   });
+
+  
 
 };
 

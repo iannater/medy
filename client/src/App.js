@@ -14,15 +14,15 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <div className="blah">
+        
       <Switch>
         <Route exact path="/" component={signup}/>
         <Route exact path="/main" component={main}/>
         <Route exact path="/login" component={login}/>
-        <Route exact patch="/createMed" component={createMed}/>
+        <Route exact patch="/createMed/:id" component={createMed}/>
 
       </Switch>
-      </div>
+      
       </Router>
       
   

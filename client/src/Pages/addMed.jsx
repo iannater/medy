@@ -12,15 +12,19 @@ const MainPage = () => {
     const [medTime, setMedTime] = useState("")
     const [medWaiting, setMedWaiting] = useState("")
     const [medAmount, setMedAmount] = useState("")
+    //Use params not working for some reason so had to skurrtt that
     const { id } = useParams();
 
+    console.log("Yo ID", location.pathname)
+    const winLocation = location.pathname
+    const newLocation = winLocation.slice(15)
+
     const submitMed = () => {
-        axios.post("/api/createmed/" + id, {
+        axios.post("/api/createmed/" + newLocation, {
             medicineName: medName,
-            timeTaken: medTime,
             waitingPeriod: medWaiting,
-            amountTaken: medAmount,
-            UserId: id
+            UserId: newLocation
+            
         })
     };
 
@@ -39,13 +43,11 @@ const MainPage = () => {
 
                                 <input onChange={(e) => { setMedName(e.target.value) }} className="txtarea" id="enterAddress" placeholder="Medicine Name" type="address"></input>
                                 <input onChange={(e) => { setMedWaiting(e.target.value) }} className="txtarea" id="enterPrice" placeholder="Waiting Period" type="price"></input>
-                                <input onChange={(e) => { setMedAmount(e.target.value) }} placeholder="Amount Taken" className="txtarea" id="sellerName" type="First Name"></input>
-                                <input onChange={(e) => { setMedTime(e.target.value) }} placeholder="Time Taken" className="txtarea" id="sellerNum" type="Last Name"></input>
 
-                                <Button onClick={submitMed} className="text-center justify-content-center">Add Medicine</Button>
+                                <Button onClick={submitMed} href="/main" className="text-center justify-content-center">Add Medicine</Button>
                                 <p></p>
                                 <div id="backtomain">
-                                    <Button href="/main:id" id="login" type="submit">Back to Main</Button>
+                                    <Button href="/main" id="login" type="submit">Back to Main</Button>
                                 </div>
 
                                 <p></p>
