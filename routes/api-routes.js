@@ -79,7 +79,7 @@ module.exports = function (app) {
 
     //, include: [{model: db.Medicine}]
    
-    db.User.findOne({ where: { id: req.user.id}, include: [{model: db.Medicine}]
+    db.User.findOne({ where: { id: req.user.id}, include: [{ all: true, nested: true }]
       
     }).then(result =>  {
       console.log("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%", result)
